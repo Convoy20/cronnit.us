@@ -25,6 +25,8 @@ $post->sendreplies = intval($_POST['sendreplies']);
 $post->nsfw = @intval($_POST['nsfw']);
 $post->url = null;
 $post->error = null;
+$post->flair_id = strval($_POST['flair_id']);
+$post->flair_text = strval($_POST['flair_text']);
 R::store($post);
 
 $this->redirect("dashboard");
